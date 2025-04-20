@@ -17,16 +17,41 @@ function App() {
        <Developer name ="Shabana" tech = "c++"></Developer>
        <Teacher class = "ten" SN = "55"></Teacher>
        <Teacher class = "Nine" SN = "92"></Teacher>
+       <Player name ="Tamim" runs = "5000"></Player>
+       <Player name ="Sakib" runs= "5500"></Player>
+       <Player name ="Taskin" runs = "1000"></Player>
+       <Salami event ="Roja Eid" amount = "4000"></Salami>
+       <Salami event ="Graduation" ></Salami>
 
        
     </>
   )
 }
+   function Salami({event, amount = 0}){
+    return(
+      <div className='student'>
+        <p>Salami For:{event} </p>
+        <p>Amount: {amount} </p>
+
+      </div>
+    )
+   }
+
+    function Player({name, runs}){
+      return(
+        <div className='student'>
+          <h3>Name: {name} </h3>
+          <p>Runs: {runs} </p>
+        </div>
+      )
+    }
+
    function Teacher(tes){
     return(
       <div style={{
         border: '2px solid green',
         borderRadius:'20px',
+        margin:'10px'
          
       }}>
         <p>English teacher</p>
@@ -43,7 +68,8 @@ function App() {
     return(
       <div style={{
         border:'2px solid green',
-        borderRadius:'20px'
+        borderRadius:'20px',
+        margin: '10px'
 
       }}>
         <h3>Developer:{props.name} </h3>
